@@ -1,6 +1,9 @@
-# City Forecast Hub
+# City Forecast
 
 A modern weather forecast service with subscription features. Users can check current weather conditions and 7-day forecasts for any city, and subscribe to receive weather updates via email at their preferred frequency.
+
+<img width="1800" alt="image" src="https://github.com/user-attachments/assets/7d995ab1-29df-42ce-9355-aa60966feb7a" />
+
 
 ## Features
 
