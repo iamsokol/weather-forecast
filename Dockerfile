@@ -8,8 +8,11 @@ COPY package*.json ./
 
 RUN npm install
 
-RUN npm install -g nodemon
+COPY . .
+
+RUN ls -la
+RUN ls -la src/ || echo "src directory not found"
 
 EXPOSE 3000
 
-CMD ["nodemon", "src/server.js"]
+CMD ["node", "src/server.js"]
