@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Forecast</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <meta name="description" content="Get real-time weather forecasts and subscribe to weather updates for your city">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>City Forecast</h1>
+    </header>
+
+    <main>
+      <div class="card">
+        <div class="tabs">
+          <div id="weather-tab" class="tab active">Weather</div>
+          <div id="subscribe-tab" class="tab">Subscribe</div>
+        </div>
+
+        <div id="weather-content" class="tab-content">
+          <div class="form-group">
+            <label for="city-input">City</label>
+            <input type="text" id="city-input" class="form-control" placeholder="Enter city name">
+          </div>
+          <button id="search-btn" class="btn">Get Weather</button>
+
+          <div id="error-message" class="alert alert-error hidden"></div>
+          
+          <div id="loading-spinner" class="loading hidden">
+            <div class="spinner"></div>
+          </div>
+
+          <div id="weather-container" class="weather-container hidden">
+            <div class="current-weather">
+              <div id="location" class="location"></div>
+              <div id="date" class="date"></div>
+              
+              <div class="weather-main">
+                <img id="weather-icon" src="" alt="" width="64" height="64">
+                <div id="temperature" class="temperature"></div>
+                <div id="weather-description" class="description"></div>
+              </div>
+              
+              <div class="weather-details">
+                <div class="weather-detail">
+                  <div class="weather-detail-label"></div>
+                  <div id="feels-like" class="weather-detail-value"></div>
+                </div>
+                <div class="weather-detail">
+                  <div class="weather-detail-label"></div>
+                  <div id="humidity" class="weather-detail-value"></div>
+                </div>
+                <div class="weather-detail">
+                  <div class="weather-detail-label"></div>
+                  <div id="wind-speed" class="weather-detail-value"></div>
+                </div>
+                <div class="weather-detail">
+                  <div class="weather-detail-label"></div>
+                  <div id="pressure" class="weather-detail-value"></div>
+                </div>
+                <div class="weather-detail">
+                  <div class="weather-detail-label"></div>
+                  <div id="uv-index" class="weather-detail-value"></div>
+                </div>
+                <div class="weather-detail">
+                  <div class="weather-detail-label"></div>
+                  <div id="visibility" class="weather-detail-value"></div>
+                </div>
+                <div class="weather-detail">
+                  <div class="weather-detail-label"></div>
+                  <div id="cloud-cover" class="weather-detail-value"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="forecast">
+              <h3>7-Day Forecast</h3>
+              <div id="forecast-days" class="forecast-days"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="subscribe-content" class="tab-content hidden">
+          <form id="subscribe-form">
+            <div class="form-group">
+              <label for="subscribe-city-input">City</label>
+              <input type="text" id="subscribe-city-input" class="form-control" placeholder="Enter city name">
+            </div>
+            
+            <div class="form-group">
+              <label for="email-input">Email</label>
+              <input type="email" id="email-input" class="form-control" placeholder="Enter your email">
+            </div>
+            
+            <div class="form-group">
+              <label>Update Frequency</label>
+              <div class="radio-group">
+                <div class="radio-option">
+                  <input type="radio" id="daily" name="frequency" value="daily">
+                  <label for="daily">Daily</label>
+                </div>
+                <div class="radio-option">
+                  <input type="radio" id="hourly" name="frequency" value="hourly">
+                  <label for="hourly">Hourly</label>
+                </div>
+                <div class="radio-option">
+                  <input type="radio" id="fifteen-minutes" name="frequency" value="fifteen_minutes">
+                  <label for="fifteen-minutes">Every 15 minutes</label>
+                </div>
+              </div>
+            </div>
+            
+            <div id="subscribe-error" class="alert alert-error hidden"></div>
+            <div id="subscribe-success" class="alert alert-success hidden"></div>
+            
+            <button type="submit" class="btn">Subscribe to Updates</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        By clicking "Subscribe", you agree to receive weather updates at the specified email address.
+        You can unsubscribe at any time using the link in each email.
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Weather data provided by <a href="https://www.weatherapi.com/" target="_blank">WeatherAPI.com</a></p>
+    </footer>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
