@@ -2,8 +2,14 @@
 
 A modern weather forecast service with subscription features. Users can check current weather conditions and 7-day forecasts for any city, and subscribe to receive weather updates via email at their preferred frequency.
 
+### [Demo link on Render](https://weather-forecast-p9u0.onrender.com/)
+https://weather-forecast-p9u0.onrender.com/
+
+### Weather tab
 <img width="1800" alt="image" src="https://github.com/user-attachments/assets/7d995ab1-29df-42ce-9355-aa60966feb7a" />
 
+### Subscribe tab
+<img width="1798" alt="image" src="https://github.com/user-attachments/assets/aead5ebf-c674-47f3-bc68-7784be78aabc" />
 
 ## Features
 
